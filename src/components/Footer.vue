@@ -71,7 +71,6 @@
                 <div class="form-outline form-white mb-4">
                   <input type="email" id="form5Example21" class="form-control" />
                   <label class="form-label" for="form5Example21">Email address</label>
-                  
                 </div>
               </div>
 
@@ -160,7 +159,7 @@
           </div>
         </section>
         <div class="bio text-center p-3">
-          <h2>INTERNET MOVIE RATING DATA  © 2022 :ESTABLISHED</h2>
+          <h2>World Movies © 2022 :ESTABLISHED</h2>
         </div>
       </div>
       <!-- Grid container -->
@@ -200,9 +199,9 @@ h5 {
 .txtt {
   font-size: 35px;
 }
-.ft {
+/* .ft {
   margin: -1rem;
-}
+} */
 .foot {
   /* width: 38%; */
 }
@@ -214,7 +213,7 @@ h5 {
 }
 h2 {
   font-weight: 600;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 100%;
 }
 .row {

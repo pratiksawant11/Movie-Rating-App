@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="pagi pagination">
+    <ul class="pagi pagination m-0">
       <li class="page-item">
         <a class="page-link" href="#">Previous</a>
       </li>

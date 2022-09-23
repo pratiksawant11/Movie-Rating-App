@@ -3,6 +3,7 @@
     <section class="page p-5">
       <div class="container-fluid">
         <div class="row text-center">
+          <h1>Most Popular Movies</h1>
           <div class="col-sm-6 col-md-4 col-lg-3 p-3" v-for="items in data" :key="items.id">
             <div class="card">
               <div class="poster">
@@ -72,6 +73,9 @@ export default {
   height: 100%;
   background-color: #1f2833;
 }
+h1 {
+  color: #42b983;
+}
 h5 {
   color: whitesmoke;
 }
@@ -80,8 +84,5 @@ h5 {
 }
 .rt {
   color: whitesmoke;
-}
-.d-flex {
-  /* margin: 10px */
 }
 </style>
