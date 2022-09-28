@@ -73,16 +73,37 @@ export default {
   height: 100%;
   background-color: #1f2833;
 }
+.card-title {
+  font-size: 1.5rem;
+}
+.d-flex {
+  padding: 0px 0px 0px 20px;
+  font-size: 1rem;
+}
+
+.d-flex:hover {
+  /* color: #df133c; */
+}
+
 h1 {
   color: #42b983;
 }
 h5 {
   color: whitesmoke;
 }
+h5:hover {
+  color: #df133c;
+}
 .rd {
   color: whitesmoke;
 }
 .rt {
   color: whitesmoke;
+}
+@media only screen and (max-width: 576px) {
+  .d-flex {
+    padding: 0px 0px 0px 0px;
+    font-size: 12.5px;
+  }
 }
 </style>

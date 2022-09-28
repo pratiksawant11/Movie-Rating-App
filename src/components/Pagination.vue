@@ -17,6 +17,7 @@
         <a class="page-link" href="#">Next</a>
       </li>
     </ul>
+    
   </div>
 </template>
 
@@ -31,9 +32,12 @@ export default {
   background-color: black;
   padding: 0px 0px 0px 540px;
 }
+.page-link {
+  color: black;
+}
 @media only screen and (max-width: 576px) {
   .pagi {
-    padding: 0px 0px 0px 100px;
+    padding: 0px 0px 0px 64px;
   }
 }
 </style>

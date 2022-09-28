@@ -57,30 +57,8 @@
             <i class="fab fa-github"></i>
           </a>
         </section>
-
-        <section class>
-          <form action>
-            <div class="box row d-flex justify-content-center">
-              <div class="col-auto">
-                <p class="pt-2">
-                  <strong>Sign Up For Our IMR</strong>
-                </p>
-              </div>
-
-              <div class="col-md-5 col-12">
-                <div class="form-outline form-white mb-4">
-                  <input type="email" id="form5Example21" class="form-control" />
-                  <label class="form-label" for="form5Example21">Email address</label>
-                </div>
-              </div>
-
-              <div class="col-auto">
-                <button type="submit" class="btn btn-outline-light mb-4">Subscribe</button>
-              </div>
-            </div>
-          </form>
-        </section>
-
+        <br />
+        <br />
         <section class>
           <div class="row">
             <div class="foot col-lg-4 col-md-4 mb-4 mb-md-0">
@@ -162,9 +140,7 @@
           <h2>World Movies © 2022 :ESTABLISHED</h2>
         </div>
       </div>
-      <!-- Grid container -->
     </footer>
-    <!-- Footer -->
   </div>
 </template>
 
@@ -187,9 +163,7 @@ export default {
 .about {
   padding: 0px 0px 0px 35px;
 }
-.box {
-  /* padding: 11px 195px 11px 0px; */
-}
+
 .flogo {
   padding: 11px 0px 3px 30px;
 }
@@ -199,12 +173,7 @@ h5 {
 .txtt {
   font-size: 35px;
 }
-/* .ft {
-  margin: -1rem;
-} */
-.foot {
-  /* width: 38%; */
-}
+
 .bio {
   /* background-color: whitesmoke; */
   color: white;

@@ -11,6 +11,7 @@ const routes = [
     name: 'Footer',
     component: Footer
   },
+
 ]
 
 const router = new VueRouter({

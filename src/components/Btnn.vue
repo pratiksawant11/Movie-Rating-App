@@ -1,25 +1,27 @@
 <template>
   <div class="btnn">
-    <button class="btn">480P</button>
+    <!-- <button class="btn">480P</button>
 
     <button class="btn">780P</button>
     <button class="btn">1080P</button>
-    <button class="btn">2160P 4K</button>
-    <button class="btn">POPULAR MOVIES</button>
-    <button class="btn">BOLLYWOOD</button>
-    <button class="btn">HOLLYWOOD</button>
-    <button class="btn">TOLLYWOOD</button>
-    <button class="btn">WEB-SERIES</button>
-    <button class="btn">HINDI DUBBED MOVIES</button>
-    <button class="btn">ENGLISH</button>
-    <button class="btn">ANIEME</button>
-    <button class="btn">NETFLIX</button>
-    <button class="btn">PRIME</button>
-    <button class="btn">AMAZON PRIME</button>
-    <button class="btn">DISNEY+</button>
-    <button class="btn">APPLE TV+</button>
-    <button class="btn">K-DRAMA SERIES</button>
-    <button class="btn">NEWS</button>
+    <button class="btn">2160P 4K</button>-->
+    <abutton class="btn" href="/">POPULAR MOVIES</abutton>
+    <a button class="btn" href="/">BOLLYWOOD</a>
+    <a button class="btn" href="/">HOLLYWOOD</a>
+    <a button class="btn" href="/">TOLLYWOOD</a>
+    <a button class="btn" href="/">WEB-SERIES</a>
+    <a button class="btn" href="/">HINDI DUBBED MOVIES</a>
+    <a button class="btn" href="/">ENGLISH</a>
+    <a button class="btn" href="/">ANIEME</a>
+    <a button class="btn" href="/">NETFLIX</a>
+    <a button class="btn" href="/">PRIME</a>
+    <a button class="btn" href="/">AMAZON PRIME</a>
+    <a button class="btn" href="/">DISNEY+</a>
+    <a button class="btn" href="/">APPLE TV+</a>
+    <a button class="btn" href="/">K-DRAMA SERIES</a>
+    <a button class="btn" href="/">NEWS</a>
+
+    <!-- <router-link class="btn" to="/Newss">News</router-link> -->
   </div>
 </template>
 

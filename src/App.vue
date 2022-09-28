@@ -9,26 +9,25 @@
           >World Movies</a>
         </div>
 
-        <form class="navbar-form navbar-left" action="/action_page.php">
-          <!-- <div class=""> -->
-          <input
-            type="text"
-            class="form-control borderdata"
-            placeholder="Search"
-            name="search"
-            v-model="query"
-            @keyup="handleSubmit(query)"
-          />
+        <form class="navbarr navbar-form navbar-left" action="/action_page.php">
+          <div class="searchh">
+            <input
+              type="text"
+              class="form-control d-flex borderdata"
+              placeholder="Search"
+              name="search"
+              v-model="query"
+              @keyup="handleSubmit(query)"
+            />
+          </div>
 
           <button class="btn btn-default" type="submit">
             <i class="glyphicon glyphicon-search"></i>
-            <div v-for="movie in data" :key="movie.id">
-              <h6>{{ movie.original_title }}</h6>
-              <img v-bind:src="'http://images.tmdb.org/t/p/w500/' +movie.poster_path" width="100px" />
 
-              <div v-if="query">
-                <h2 class="display-4">Search result</h2>
-              </div>
+            <div class="container-fluid" v-for="movie in data" :key="movie.id">
+              <h6>{{ movie.original_title }}</h6>
+              <img v-bind:src="'http://images.tmdb.org/t/p/w500/' +movie.poster_path" width="250px" />
+
               <div class="container-fluid d-flex" v-if="query">
                 <div class="row text-center">
                   <div
@@ -36,28 +35,32 @@
                     v-for="items in data"
                     :key="items.id"
                   >
-                    <!-- <div class="card d-flex"> -->
-                    <div class="poster">
-                      <img
-                        class="cardd card-img-top"
-                        :src="'http://image.tmdb.org/t/p/w500/'+items.poster_path"
-                        alt="Card image cap"
-                      />
-                    </div>
-                    <div class="card-content">
-                      <div class="title px-3 pt-3">
-                        <h5 class="card-title">{{items.title}}</h5>
+                    <div class="card d-flex">
+                      <div class="poster">
+                        <img
+                          class="cardd card-img-top"
+                          :src="'http://image.tmdb.org/t/p/w500/'+items.poster_path"
+                          alt="Card image cap"
+                        />
                       </div>
-                      <div class="d-flex flex-row">
-                        <div class="rel release-date d-flex flex-column text-left p-3">
-                          <div class="rel">Release date</div>
-                          <div class="date">{{items.release_date}}</div>
+                      <div>
+                        <div class="card-content">
+                          <div class="title px-3 pt-3">
+                            <h5 class="card-title">{{items.title}}</h5>
+                          </div>
+
+                          <div class="d-flex flex-row">
+                            <div class="rel release-date d-flex flex-column text-left p-3">
+                              <div class="rel">Release date</div>
+                              <div class="date">{{items.release_date}}</div>
+                            </div>
+
+                            <div class="rate rating p-3">
+                              <div>Rating☆</div>
+                              <div>{{items.vote_average}}</div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="rate rating p-3">
-                          <div>Rating☆</div>
-                          <div>{{items.vote_average}}</div>
-                        </div>
-                        <!-- </div> -->
                       </div>
                     </div>
                   </div>
@@ -65,68 +68,10 @@
               </div>
             </div>
           </button>
-
-          <!-- <form
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar"
-                aria-controls="offcanvasDarkNavbar"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </form>
-              <div
-                class="offcanvas offcanvas-end text-bg-black"
-                tabindex="-1"
-                id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel"
-              >
-                <div class="bar1 offcanvas-header">
-                  <a
-                    class="navtag1 nav-link color router-link-exact-active active logo-link"
-                    href="/"
-                  >World Movies</a>
-
-                  <button
-                    type="button"
-                    class="btn-close btn-close-white"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
-                </div>
-
-                <div class="bar2 offcanvas-body">
-                  <ul class="toggle navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Bollywood</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Hollywood</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Web-Series</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Hindi Dubbed Movies</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Most Popular Movies</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">250+ Movies</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Movie News</a>
-                    </li>
-                  </ul>
-                </div>
-          </div>-->
         </form>
       </div>
     </nav>
+
     <Btnn />
     <Home />
     <Pagination />
@@ -176,7 +121,6 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
 nav {
   padding: 30px;
 }
@@ -192,70 +136,79 @@ nav a.router-link-exact-active {
 .navbar {
   background-color: black;
 }
-
 .headtag {
-  padding: 0px 0px 0px 20px;
+  padding: 0px 0px 0px 14px;
   font-size: 45px;
+  padding: 12px 6px 0px 4px;
   color: #42b983;
+  padding: 0px 0px 10px 0px;
 }
-
+.headtag:hover {
+  background: black;
+  box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 10px #ff96ad;
+}
 .navtag1 {
   color: #42b983;
   font-size: 46px;
   padding: 10px 0px 0px 40px;
 }
 .form-control {
-  padding: 10px 0px 8px 115px;
-  border: 3px solid white;
+  transform: translate(-50, -50);
+  color: white;
+  font-size: 16px;
+  background: transparent;
+  padding: 10px;
+  border: solid3px #9a86fd;
+  outline: inset;
+  border-radius: 50px;
+  transition: all 0.1s;
+  box-shadow: 0 4px 8 px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #9a86fd;
+  padding: 9px 0px 10px 25px;
 }
-
-.nav-item {
-  font-size: 20px;
-}
-.bar2 {
-  color: aliceblue;
-}
-.navbar-toggler {
-  background-color: white;
-  color: black !important;
-}
-.bar1 {
-  background-color: black;
-}
-.bar2 {
-  background-color: black;
-}
-
 .form-control::placeholder {
   color: #6c757d;
   opacity: 1;
   font-size: 24px;
   color: white;
-  background-color: black;
 }
+
+.navbar-header {
+  padding: 0px 0px 20px 0px;
+}
+
+.nav-item {
+  font-size: 20px;
+}
+
+.navbar-toggler {
+  background-color: white;
+  color: black !important;
+}
+
 .btn {
   background-color: black !important;
 }
-.cardd {
-}
+
 .searchdata {
   background-color: black;
 }
-
-.d-flex {
-  height: 100%;
-  background-color: #1f2833;
-  padding: 0px 0px 0px 14px;
-  font-size: 16px;
+.searchh {
+  padding: 0px 55px 15px 0px;
 }
+.d-flex {
+  background-color: #1f2833;
+  /* padding: 0px 0px 0px 5px; */
+  font-size: 18px;
+}
+
 h5 {
   color: white;
-  /* font-size: 79%; */
-  font-size: 1.25rem
+  font-size: 25px;
 }
 
 .title {
   background-color: #1f2833;
+  padding: 0px 0px 25px 0px;
 }
 
 .rel {
@@ -275,22 +228,48 @@ h5 {
 
 .card-content {
   background-color: #1f2833;
-  /* padding: 0px 0px 25px 0px; */
+  height: 256px;
 }
-.card-title{
-  /* font-size: 108%; */
+.container-fluid {
+  background-color: black !important;
 }
-/* ::-moz-scrollbar {
-  width: 20px;
-  height: 20px;
+.card-title {
+  /* font-size: 40px; */
+  font-family: Georgia, serif;
 }
-::-moz-scrollbar-thumb {
-  background: linear-gradient(to bottom, #ff850a, #ff3474);
-  border-radius: 50px;
+.card-title:hover {
+  color: #df133c;
 }
-::-moz-scrollbar-track {
-  background: #474747;
-} */
+h6 {
+  color: whitesmoke;
+  font-size: 300%;
+}
+h6:hover {
+  color: #df133c;
+}
+.display-4 {
+  font-size: 22px;
+}
+.display-4:hover {
+  color: black;
+}
+.navbarr {
+  padding: 12px 45px 0px 0px;
+}
+.navbarr {
+  color: white !important;
+}
+
+input:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #ffbb70;
+}
+
 @media only screen and (max-width: 576px) {
+  .navbarr {
+    padding: 12px 10px 0px 0px;
+  }
+  .searchh {
+    padding: 0px 0px 15px 0px;
+  }
 }
 </style>
